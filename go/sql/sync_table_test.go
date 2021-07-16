@@ -71,14 +71,14 @@ func (s *SyncTableSuite) SetupSuite() {
 		State: "state2",
 	}
 	s.record1 = &UserDeviceSyncRecord{
-		State: s.row1.State,
+		State: &s.row1.State,
 		UserDeviceJournal: UserDeviceJournal{
 			Key:          s.row1.Key,
 			LastModified: 101,
 		},
 	}
 	s.record2 = &UserDeviceSyncRecord{
-		State: s.row2.State,
+		State: &s.row2.State,
 		UserDeviceJournal: UserDeviceJournal{
 			Key:          s.row2.Key,
 			LastModified: 102,
